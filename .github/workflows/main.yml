@@ -10,7 +10,6 @@ jobs:
     - uses: cachix/install-nix-action@v23
       with:
         nix_path: nixpkgs=channel:nixos-unstable
-    - working-directory: ./2023-02-24-wasm-comm
     - run: ls
     - run: nix shell https://gitlab.haskell.org/ghc/ghc-wasm-meta/-/archive/master/ghc-wasm-meta-master.tar.gz
     - run: ls    

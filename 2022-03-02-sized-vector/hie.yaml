@@ -1,4 +1,0 @@
-cradle:
-  cabal:
-    - path: "./vector-with-typed-length.hs"
-      component: "x20220302-sized-vector:exe:x20220302-sized-vector"
