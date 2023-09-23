@@ -1,10 +1,11 @@
-build: dist/index.html dist/WasmComm.wasm dist/client.js
+# build: dist/index.html dist/WasmComm.wasm dist/client.js
+build: dist/WasmComm.wasm
 
 dev:
 	nodemon -e js,hs -x "$(MAKE) build || exit 1"
 
-serve:
-	(cd dist; python -mhttp.server)
+# serve:
+# 	(cd dist; python -mhttp.server)
 
 build/:
 	mkdir -p build
@@ -17,11 +18,11 @@ dist/WasmComm.wasm: WasmComm.hs Store.hs dist/ build/
 		-odir build -hidir dist -stubdir dist \
 		-optl-Wl,--export=hs_init,--export=callocBuffer,--export=freeBuffer,--export=echo,--export=save,--export=load,--export=size
 
-dist/client.js: client.js dist/
-	npx esbuild $< --bundle --sourcemap --outfile=$@ --format=esm
+# dist/client.js: client.js dist/
+# 	npx esbuild $< --bundle --sourcemap --outfile=$@ --format=esm
 
-dist/index.html: index.html dist/
-	cp $< $@
+# dist/index.html: index.html dist/
+# 	cp $< $@
 
 clean:
 	rm -rf build dist
