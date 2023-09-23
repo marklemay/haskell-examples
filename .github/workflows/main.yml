@@ -11,5 +11,5 @@ jobs:
       with:
         nix_path: nixpkgs=channel:nixos-unstable
     - run: ls
-    - run: nix shell https://gitlab.haskell.org/ghc/ghc-wasm-meta/-/archive/master/ghc-wasm-meta-master.tar.gz --run make
+    - run: nix shell https://gitlab.haskell.org/ghc/ghc-wasm-meta/-/archive/master/ghc-wasm-meta-master.tar.gz --command make
     - run: ls
