@@ -21,12 +21,12 @@ jobs:
           filename: 'release.zip'
 
       - run: ls
-      
-  #     - name: Create Release
-  #         uses: softprops/action-gh-release@v1
-  # #        if: startsWith(github.ref, 'refs/tags/')
-  #         with:
-  #           tag_name : dist
-  #           prerelease : true
-  # #           draft: true
-  #           files: release.zip
+
+      - name: Create Release
+          uses: softprops/action-gh-release@v1
+  #        if: startsWith(github.ref, 'refs/tags/')
+          with:
+            tag_name : dist
+            prerelease : true
+  #           draft: true
+            files: release.zip
