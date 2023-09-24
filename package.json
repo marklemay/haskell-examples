@@ -1,12 +1,50 @@
 {
-    "scripts": {
-        "build": "make build"
-    },
-    "dependencies": {
-        "@bjorn3/browser_wasi_shim": "^0.2.4"
-    },
-    "devDependencies": {
-        "esbuild": "^0.17.10",
-        "eslint": "^8.34.0"
-    }
+	
+  "main": "client.in.js",
+	
+  "scripts": {
+	
+  	
+  "start": "rollup client.in.js -c",
+	
+  	
+  "test": "echo \"no test specified\" && exit 0"
+	
+  },
+	
+  "dependencies": {
+	
+  	
+  "@bjorn3/browser_wasi_shim": "^0.2.15",
+	
+  	
+  "@rollup/plugin-node-resolve": "^15.2.1",
+	
+  	
+  "http-server": "^14.1.1",
+	
+  	
+  "rollup": "^3.29.3"
+	
+  },
+	
+  "devDependencies": {
+	
+  	
+  "esbuild": "^0.17.10",
+	
+  	
+  "eslint": "^8.34.0"
+	
+  },
+	
+  "name": "release",
+	
+  "description": "Browser to Haskell Wasm Reactor Module Communication Example ============================================================",
+	
+  "version": "1.0.0",
+	
+  "author": "",
+	
+  "license": "ISC"
 }

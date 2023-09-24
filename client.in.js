@@ -76,7 +76,7 @@ function test() {
 
 (async function () {
     // load Haskell Wasm Reactor Module
-    window.wasm = await WebAssembly.compileStreaming(fetch("WasmComm.wasm"));
+    window.wasm = await WebAssembly.compileStreaming(fetch("dist/WasmComm.wasm"));
     window.wasi = new WASI([], ["LC_ALL=en_US.utf-8"], [/* fds */]);
     window.inst = await WebAssembly.instantiate(wasm, {
         "wasi_snapshot_preview1": wasi.wasiImport,
