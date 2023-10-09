@@ -30,3 +30,8 @@ size = size2
 -- * https://stackoverflow.com/questions/22886845/holding-a-data-map-in-memory
 -- * https://gitlab.haskell.org/ghc/ghc/-/issues/22468
 -- * https://wiki.haskell.org/Top_level_mutable_state
+
+
+
+foreign export ccall anum :: IO Int
+anum = pure 7
