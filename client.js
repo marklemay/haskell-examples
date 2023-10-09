@@ -67,8 +67,6 @@ function store_load(k) {
 ////////////////////////////////////////////////////////////////////////////////
 
 function test() {
-    
-    console.log("num:", inst.exports.anum());
     console.log("echo:", echo("hello world"));
     console.log("size before", store_size());
     store_save("a", "42");
@@ -77,6 +75,7 @@ function test() {
     console.log("a=", store_load("a"));
     console.log("b=", store_load("b"));
     console.log("c=", store_load("c"));
+    console.log("num:", inst.exports.anum());
 }
 
 (async function () {
