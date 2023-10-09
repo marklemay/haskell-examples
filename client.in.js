@@ -64,6 +64,7 @@ function store_load(k) {
 ////////////////////////////////////////////////////////////////////////////////
 
 function test() {
+    console.log("num:", inst.exports.anum());
     console.log("echo:", echo("hello world"));
     console.log("size before", store_size());
     store_save("a", "42");

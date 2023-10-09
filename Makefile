@@ -16,7 +16,7 @@ dist/WasmComm.wasm: WasmComm.hs Store.hs dist/ build/
 	wasm32-wasi-ghc $< -o $@  \
 		-no-hs-main -optl-mexec-model=reactor \
 		-odir build -hidir dist -stubdir dist \
-		-optl-Wl,--export=hs_init,--export=callocBuffer,--export=freeBuffer,--export=echo,--export=save,--export=load,--export=size
+		-optl-Wl,--export=hs_init,--export=callocBuffer,--export=freeBuffer,--export=echo,--export=save,--export=load,--export=size,--export=anum
 
 # dist/client.js: client.js dist/
 # 	npx esbuild $< --bundle --sourcemap --outfile=$@ --format=esm
